@@ -1,0 +1,66 @@
+#results {
+    margin-top: 50px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  #UpdateTitle {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  hr.style13 {
+    border-top: 1px solid #8c8b8b;
+  }
+  
+  .formDIV {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .formDIV label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .formDIV input[type="text"],
+  .formDIV textarea,
+  .formDIV input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .formDIV .myButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .formDIV .myButton:hover {
+    background-color: #45a049;
+  }
+  

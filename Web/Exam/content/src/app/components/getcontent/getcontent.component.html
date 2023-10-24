@@ -1,0 +1,24 @@
+<div id="results">
+    <table >
+      <tr>
+        <th>Id</th>
+        <th>Date</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Url</th>
+        <th>UserId</th>
+      </tr>
+      <tr *ngFor="let cont of content">
+        <td>{{cont.Id}}</td>
+        <td>{{cont.Date}}</td>
+        <td>{{ cont.Title }}</td>
+        <td>{{ cont.Description }}</td>   
+        <td>{{ cont.Url }}</td>        
+        <td>{{ cont.UserId }}</td>             
+      </tr>
+    </table>
+
+    <button (click)="refresh()">Button</button>
+  </div>
+  
+

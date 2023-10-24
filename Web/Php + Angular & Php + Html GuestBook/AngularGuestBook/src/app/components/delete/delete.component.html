@@ -1,0 +1,23 @@
+<h1 id="Title">Guest Book</h1>
+<hr class="style13">
+<div id="results">
+  <table>
+    <tr>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Comment</th>
+      <th>Date</th>
+      <th>Action</th>
+    </tr>
+    <ng-container *ngFor="let entry of books">
+      <tr class="result-row" [attr.data-entry-title]="entry.Title">
+        <td>{{ entry.Author }}</td>
+        <td>{{ entry.Title }}</td>
+        <td>{{ entry.Comment }}</td>
+        <td>{{ entry.Date }}</td>
+        <td><button class="delete-button" (click)="deleteEntry(entry.Title)">Delete</button></td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
+

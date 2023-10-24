@@ -1,0 +1,39 @@
+.form-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 0 auto 10px; /* Center the form control */
+  box-sizing: border-box; /* Ensure the width includes padding and border */
+}
+
+button[type="submit"] {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto; /* Center the button */
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}

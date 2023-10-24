@@ -1,0 +1,23 @@
+<br>
+<nav class="navbar">
+    <li><a class="active" routerLink="/" (click)="makeButtonActive('home')"
+        [ngClass]="{'active': active === 'home'}">Home</a></li>
+
+    <li><a class="active" routerLink="/addbook" (click)="makeButtonActive('add')"
+        [ngClass]="{'active': active === 'add'}">Add Book</a></li>
+
+    <li><a class="active" routerLink="/updatebook" (click)="makeButtonActive('update')"
+        [ngClass]="{'active': active === 'update'}">Update Book</a></li>
+
+    <li><a class="active" routerLink="/deletebook" (click)="makeButtonActive('delete')"
+        [ngClass]="{'active': active === 'delete'}">Delete Book</a></li>
+
+    <li><a class="active" routerLink="/browsebook" (click)="makeButtonActive('browse')"
+        [ngClass]="{'active': active === 'browse'}">Browse</a></li>
+
+    <li><a class="active" routerLink="/login" (click)="makeButtonActive('login')"
+        [ngClass]="{'active': active === 'Login'}">Login</a></li>    
+
+   
+
+</nav>

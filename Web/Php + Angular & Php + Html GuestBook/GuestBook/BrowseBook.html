@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guest Book</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="BrowseBook.css">
+</head>
+<body>
+  <h1 id="Title">Guest Book</h1>
+  <hr class="style13">
+  <form id="search-form">
+    <label for="filter-by-author">Filter by Author:</label>
+    <br>
+    <input type="text" id="filter-by-author">
+    <br>
+    <br>
+    <label for="filter-by-title">Filter by Title:</label>
+    <br>
+    <input type="text" id="filter-by-title">
+    <br>
+    <br>
+    <input type="submit" value="Search" class="myButton">
+  </form>
+  <br>
+  <div id="results"></div>
+  <div class="">
+    <hr class="style13">
+    <nav class="navbar">
+      <a href="AddBook.html">Add Book</a>
+      <a href="UpdateBook.html">Update Book</a>
+      <a href="DeleteBook.html">Delete Book</a>
+      <a href="BrowseBook.html">Browse Books</a>
+    </nav>
+  </div>
+  <div id="pagination"></div>
+  <script>
+    $(function() {
+  $('#search-form').submit(function(event) {
+    event.preventDefault();
+    var author = $('#filter-by-author').val();
+    var title = $('#filter-by-title').val();
+
+    $.ajax({
+      type: 'GET',
+      url: 'BrowseBook.php',
+      data: {
+        filter_by_author: author,
+        filter_by_title: title
+      },
+      dataType: 'json',
+      success: function(data) {
+        // Build the table to display the search results
+        var table = '<table>';
+        table += '<tr><th>Author</th><th>Title</th><th>Comment</th><th>Date</th></tr>';
+        
+        $.each(data.books, function(index, entry) {
+          table += '<tr>';
+          table += '<td>' + entry.author + '</td>';
+          table += '<td>' + entry.title + '</td>';
+          table += '<td>' + entry.comment + '</td>';
+          table += '<td>' + entry.date + '</td>';
+          table += '</tr>';
+        });
+        
+        table += '</table>';
+        $('#results').html(table);
+        
+        // Build the pagination links
+        var pagination = '<div class="pagination">';
+        
+        for (var i = 1; i <= data.totalPages; i++) {
+          pagination += '<a href="#" data-page="' + i + '">' + i + '</a>';
+        }
+        
+        pagination += '</div>';
+        $('#results').append(pagination);
+        
+        // Handle pagination link click event
+        $('.pagination a').click(function(e) {
+          e.preventDefault();
+          var page = $(this).data('page');
+          loadPage(page);
+        });
+      },
+      error: function(xhr, status, error) {
+        console.log("Error: " + error.message);
+        $('#results').html('Error retrieving data: ' + error.message);
+      }
+    });
+  });
+  
+  // Function to load a specific page
+  function loadPage(page) {
+    var author = $('#filter-by-author').val();
+    var title = $('#filter-by-title').val();
+    
+    $.ajax({
+      type: 'GET',
+      url: 'BrowseBook.php',
+      data: {
+        filter_by_author: author,
+        filter_by_title: title,
+        page: page
+      },
+      dataType: 'json',
+      success: function(data) {
+        // Update the table with the new page data
+        var table = '<table>';
+        table += '<tr><th>Author</th><th>Title</th><th>Comment</th><th>Date</th></tr>';
+        
+        $.each(data.books, function(index, entry) {
+          table += '<tr>';
+          table += '<td>' + entry.author + '</td>';
+          table += '<td>' + entry.title + '</td>';
+          table += '<td>' + entry.comment + '</td>';
+          table += '<td>' + entry.date + '</td>';
+          table += '</tr>';
+        });
+        
+        table += '</table>';
+        $('#results table').replaceWith(table);
+        
+        // Update the active page link
+        $('.pagination a').removeClass('active');
+        $('.pagination a[data-page="' + page + '"]').addClass('active');
+      },
+      error: function(xhr, status, error) {
+        console.log("Error: " + error.message);
+        $('#results').html('Error retrieving data: ' + error.message);
+      }
+    });
+  }
+});
+
+</script>
+
+</body>
+</html>

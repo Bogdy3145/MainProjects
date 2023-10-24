@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Add Book</title>
+	<link rel="stylesheet" href="AddBook.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1 id="Title">Add Book</h1>
+    <hr class="style13">
+    
+
+    <form method="POST" action="AddBook.php">
+      <label for="Title">Title:</label>
+      <br>
+      <input type="text" name="Title" >
+      <br>
+      <br>
+      <label for="Author">Author:</label>
+      <br>
+      <input type="text" name="Author" >
+      <br>
+      <br>
+      <label for="Comment">Comment:</label>
+      <br>
+      <input type="text" name="Comment"  title="x">
+      <br>
+      <br>
+      <label for="Date">Date:</label>
+      <br>
+      <input type="date" name="Date" >
+      <br>
+      <br>
+      <input type="submit" value="Add Book" class="myButton">
+    </form>
+    <hr class="style13">
+    <div class="">
+      <nav class="navbar">
+        <a href="AddBook.html">Add Book</a>
+        <a href="UpdateBook.html">Update Book</a>
+        <a href="DeleteBook.html">Delete Book</a>
+        <a href="BrowseBook.html">Browse Books</a>
+      </nav>
+    </div>
+  </body>
+</html>

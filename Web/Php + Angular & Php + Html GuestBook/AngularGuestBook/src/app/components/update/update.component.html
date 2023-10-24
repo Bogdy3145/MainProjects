@@ -1,0 +1,45 @@
+<div id="results">
+    <table>
+      <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Comment</th>
+        <th>Date</th>
+      </tr>
+      <tr *ngFor="let book of books" (click)="selectBook(book)">
+        <td>{{ book.Author }}</td>
+        <td>{{ book.Title }}</td>
+        <td>{{ book.Comment }}</td>
+        <td>{{ book.Date }}</td>
+      </tr>
+    </table>
+  </div>
+  
+  <h1 id="UpdateTitle">Update Entry</h1>
+  <hr class="style13">
+  <div class="formDIV">
+    <form id="updateForm" (ngSubmit)="updateEntry()" #updateForm="ngForm">
+      <label for="Author">Author:</label>
+      <br>
+      <input type="text" id="updateAuthor" name="Author" required [(ngModel)]="selectedBook.Author">
+      <br>
+      <br>
+      <label for="Title">Title:</label>
+      <br>
+      <input type="text" id="updateTitle" name="Title" required [(ngModel)]="selectedBook.Title">
+      <br>
+      <br>
+      <label for="Comment">Comment:</label>
+      <br>
+      <textarea id="updateComment" name="Comment" required [(ngModel)]="selectedBook.Comment"></textarea>
+      <br>
+      <br>
+      <label for="Date">Date:</label>
+      <br>
+      <input type="date" id="updateDate" name="Date" required [(ngModel)]="selectedBook.Date">
+      <br>
+      <br>
+      <input type="submit" value="Update" class="myButton" (click)="confirmUpdate()">
+    </form>
+  </div>
+  

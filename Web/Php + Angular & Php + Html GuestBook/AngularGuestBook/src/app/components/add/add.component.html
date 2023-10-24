@@ -1,0 +1,29 @@
+<form #bookForm="ngForm" novalidate (ngSubmit)="handleAdd()">
+  <div class="form-group">
+    <label>Author
+      <input type="text" class="form-control" name="author" placeholder="Enter author..." required
+             [(ngModel)]="book.Author">
+    </label>
+
+    <label>Title
+      <input type="text" class="form-control" name="title" placeholder="Enter title..." required
+             [(ngModel)]="book.Title">
+    </label>
+
+    <label>Comment
+      <input type="text" class="form-control" name="comment" placeholder="Enter comment..." required
+             [(ngModel)]="book.Comment">
+    </label>
+
+    <label>Date
+      <input type="date" class="form-control" name="date" placeholder="Enter date..." required
+             [(ngModel)]="book.Date">
+    </label>
+  </div>
+
+  <button class="btn btn-dark" type="submit">Add</button>
+
+  <div class="popup" *ngIf="showPopup">
+    Please fill in all fields before adding.
+  </div>
+</form>

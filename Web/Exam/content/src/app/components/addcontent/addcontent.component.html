@@ -1,0 +1,25 @@
+<form #contentForm="ngForm" novalidate (ngSubmit)="handleAdd()">
+    <div class="form-group">
+      <label>Title
+        <input type="text" class="form-control" name="Title" placeholder="Enter title..." required
+               [(ngModel)]="localContent.Title">
+      </label>
+  
+      <label>Description
+        <input type="text" class="form-control" name="Description" placeholder="Enter Description..." required
+               [(ngModel)]="localContent.Description">
+      </label>
+  
+      <label>Url
+        <input type="text" class="form-control" name="Url" placeholder="Enter Url..." required
+               [(ngModel)]="localContent.Url">
+      </label>
+    </div>
+  
+    <button class="btn btn-dark" type="submit">Add</button>
+  
+    <div class="popup" *ngIf="showPopup">
+      Please fill in all fields before adding.
+    </div>
+  </form>
+  
