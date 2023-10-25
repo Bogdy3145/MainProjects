@@ -1,2 +1,5 @@
-# MainProjects
-This is where my main projects from University will be
+#Some proof of my work
+
+Every folder from this repo that contains code is properly structured and useses a layered-architecture format.
+
+
