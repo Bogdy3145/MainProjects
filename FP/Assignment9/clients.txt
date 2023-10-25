@@ -1,0 +1,3 @@
+1, Bogdan, False, 
+2, Adrian, False, 
+3, Text client, False, 
