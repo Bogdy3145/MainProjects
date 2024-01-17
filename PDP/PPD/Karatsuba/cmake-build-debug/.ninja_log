@@ -1,0 +1,17 @@
+# ninja log v5
+1	1968	7237208042936684	CMakeFiles/Karatsuba.dir/Polinom.cpp.obj	a58f7fa5d7caf6a4
+8	2758	7237208050796067	CMakeFiles/Karatsuba.dir/Karatsuba.cpp.obj	cf62f6c36dcb5be1
+2759	3257	7237208055228649	Karatsuba.exe	d6771cc82bef332f
+5	2524	7243241380865711	CMakeFiles/Karatsuba.dir/Karatsuba.cpp.obj	cf62f6c36dcb5be1
+2525	3369	7243241389319019	Karatsuba.exe	d6771cc82bef332f
+4	1816	7243242669443006	CMakeFiles/Karatsuba.dir/Karatsuba.cpp.obj	cf62f6c36dcb5be1
+1816	2091	7243242672168995	Karatsuba.exe	d6771cc82bef332f
+10	760	7243269664039386	CMakeFiles/Karatsuba.dir/Polinom.cpp.obj	a58f7fa5d7caf6a4
+4	1217	7243269668575654	CMakeFiles/Karatsuba.dir/Karatsuba.cpp.obj	cf62f6c36dcb5be1
+1217	1465	7243269671021283	Karatsuba.exe	d6771cc82bef332f
+8	1203	7243269970681707	CMakeFiles/Karatsuba.dir/Karatsuba.cpp.obj	cf62f6c36dcb5be1
+1205	1480	7243269973451474	Karatsuba.exe	d6771cc82bef332f
+5	972	7243270306045601	CMakeFiles/Karatsuba.dir/Karatsuba.cpp.obj	cf62f6c36dcb5be1
+972	1230	7243270308568596	Karatsuba.exe	d6771cc82bef332f
+3	1570	7243270989129145	CMakeFiles/Karatsuba.dir/Karatsuba.cpp.obj	cf62f6c36dcb5be1
+1571	1803	7243270991428104	Karatsuba.exe	d6771cc82bef332f
