@@ -13,7 +13,7 @@ Mobile Applications - Course I took in Sem5 at FMI
 
 OOP(Object Oriented Programming) - Course I took in Sem2 at FMI
 
-PDP(Parallel and Distributed Programming) - Course I took in Sem5 at FMI
+PDP(Parallel and Distributed Programming) - 15 puzzle problem + Course I took in Sem5 at FMI 
 
 Robot - Project I did during the internship at AROBS
 
